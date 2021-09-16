@@ -28,19 +28,13 @@ class Localizer {
     this.localization = injector.get(LocalizationService);
     }
 
-    l(key: string, ...args: any[]): string {
+    l(key: string): string {
         let localizedText = this.localization.localize(key, this.localizationSourceName);
 
         if (!localizedText) {
             localizedText = key;
         }
-
-        if (!args || !args.length) {
-            return localizedText;
-        }
-
-        args.unshift(localizedText);
-        return abp.utils.formatString.apply(this, args);
+        return localizedText
     }
 
     isGranted(permissionName: string): boolean {

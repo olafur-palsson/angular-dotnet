@@ -6,9 +6,7 @@ import { FeatureCheckerService, LocalizationService, MessageService, NotifyServi
 import { AbpMultiTenancyService, PermissionCheckerService } from 'abp-ng2-module';
 
 export abstract class AppComponentBase {
-
     localizationSourceName = AppConsts.localization.defaultLocalizationSourceName;
-
     localization: LocalizationService;
     permission: PermissionCheckerService;
     feature: FeatureCheckerService;
