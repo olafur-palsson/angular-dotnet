@@ -1,15 +1,23 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { enableProdMode } from '@angular/core';
-import { environment } from './environments/environment';
-import { RootModule } from './root.module';
+import { environment } from './config/environment';
 import { hmrBootstrap } from './hmr';
 
 import 'moment/min/locales.min';
 import 'moment-timezone';
 
+import { Component, enableProdMode } from '@angular/core';
+import { RootModule } from './root.module';
+
 if (environment.production) {
     enableProdMode();
 }
+
+
+@Component({
+    selector: 'app-root',
+    template: `<router-outlet></router-outlet>`
+})
+export class App {}
 
 const bootstrap = () => {
     return platformBrowserDynamic().bootstrapModule(RootModule);

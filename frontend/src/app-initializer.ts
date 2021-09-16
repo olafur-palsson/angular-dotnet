@@ -5,7 +5,7 @@ import * as moment from 'moment-timezone';
 import { filter as _filter, merge as _merge } from 'lodash-es';
 import { AppConsts } from '@shared/AppConsts';
 import { AppSessionService } from '@shared/session/app-session.service';
-import { environment } from './environments/environment';
+import { environment } from './config/environment';
 
 @Injectable({
   providedIn: 'root',
