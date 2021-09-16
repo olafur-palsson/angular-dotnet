@@ -1,14 +1,14 @@
-import { AbpProjectNameTemplatePage } from './app.po';
+import { AbpProjectNameTemplatePage } from './app.po'
 
 describe('AbpProjectName App', function() {
-  let page: AbpProjectNameTemplatePage;
+  let page: AbpProjectNameTemplatePage
 
   beforeEach(() => {
-    page = new AbpProjectNameTemplatePage();
-  });
+    page = new AbpProjectNameTemplatePage()
+  })
 
   it('should display message saying app works', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
-  });
-});
+    page.navigateTo()
+    expect(page.getParagraphText()).toEqual('app works!')
+  })
+})

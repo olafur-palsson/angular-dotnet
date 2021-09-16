@@ -6,8 +6,8 @@
 // https://github.com/typings/typings
 // https://www.typescriptlang.org/docs/handbook/writing-declaration-files.html
 
-declare let System: any;
-declare let Push: any;
+declare let System: any
+declare let Push: any
 
 declare namespace abp {
   namespace ui {

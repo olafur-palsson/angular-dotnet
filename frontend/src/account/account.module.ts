@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientJsonpModule } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalModule } from 'ngx-bootstrap/modal';
-import { AccountRoutingModule } from './account-routing.module';
 import { ServiceProxyModule } from '@shared/service-proxies/service-proxy.module';
 import { SharedModule } from '@shared/shared.module';
 import { AccountComponent } from './account.component';
@@ -12,7 +11,27 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AccountLanguagesComponent } from './layout/account-languages.component';
 import { AccountHeaderComponent } from './layout/account-header.component';
-import { AccountFooterComponent } from './layout/account-footer.component';
+import { Footer } from './layout/footer';
+import { RouterModule } from '@angular/router';
+
+@NgModule({
+    imports: [
+        RouterModule.forChild([
+            {
+                path: '',
+                component: AccountComponent,
+                children: [
+                    { path: 'login', component: LoginComponent },
+                    { path: 'register', component: RegisterComponent }
+                ]
+            }
+        ])
+    ],
+    exports: [
+        RouterModule
+    ]
+})
+class Router { }
 
 // tenants
 import { TenantChangeComponent } from './tenant/tenant-change.component';
@@ -26,7 +45,7 @@ import { TenantChangeDialogComponent } from './tenant/tenant-change-dialog.compo
         HttpClientJsonpModule,
         SharedModule,
         ServiceProxyModule,
-        AccountRoutingModule,
+        Router,
         ModalModule.forChild()
     ],
     declarations: [
@@ -35,7 +54,7 @@ import { TenantChangeDialogComponent } from './tenant/tenant-change-dialog.compo
         RegisterComponent,
         AccountLanguagesComponent,
         AccountHeaderComponent,
-        AccountFooterComponent,
+        Footer,
         // tenant
         TenantChangeComponent,
         TenantChangeDialogComponent,

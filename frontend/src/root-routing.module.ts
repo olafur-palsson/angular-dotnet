@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from '@angular/core'
+import { Routes, RouterModule } from '@angular/router'
 
 const routes: Routes = [
   { path: '', redirectTo: '/app/about', pathMatch: 'full' },
@@ -13,7 +13,7 @@ const routes: Routes = [
     loadChildren: () => import('app/app.module').then(m => m.AppModule), // Lazy load account module
     data: { preload: true }
   }
-];
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],

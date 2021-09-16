@@ -10,14 +10,22 @@ import { AppComponentBase } from '@shared/app-component-base';
 
 @Component({
   selector: 'abp-modal-header',
-  templateUrl: './abp-modal-header.component.html',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  template: `
+      <div class="modal-header">
+          <h4 class="modal-title">{{ title }}</h4>
+          <button
+                  type="button"
+                  class="close"
+                  aria-label="Close"
+                  (click)="onCloseClick.emit()">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+  `
 })
 export class AbpModalHeaderComponent extends AppComponentBase {
   @Input() title: string;
-
   @Output() onCloseClick = new EventEmitter<number>();
-
   constructor(injector: Injector) {
     super(injector);
   }

@@ -18,7 +18,8 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-    'indent': ['error', 2],
+    semi: ['error', 'never'],
+    indent: ['error', 2],
     '@angular-eslint/directive-selector': ['error', { type:   'attribute', prefix: 'ourprefix', style: 'camelCase'}],
     '@angular-eslint/component-selector': ['error', { type: 'element', prefix: 'ourcomponent', style: 'kebab-case'}]
   }

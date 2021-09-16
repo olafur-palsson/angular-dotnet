@@ -1,5 +1,4 @@
 import { ElementRef, Injector, Pipe, PipeTransform } from '@angular/core';
-import { AppComponentBase } from '@shared/app-component-base';
 import { AppConsts } from '../AppConsts';
 import {
     AbpMultiTenancyService,
@@ -43,13 +42,13 @@ class Localizer {
 }
 
 @Pipe({ name: 'localize' })
-export class LocalizePipe extends AppComponentBase implements PipeTransform {
+export class LocalizePipe extends Localizer implements PipeTransform {
     constructor(injector: Injector) {
         super(injector);
     }
 
-    transform(key: string, ...args: any[]): string {
-        return this.l(key, ...args);
+    transform(key: string): string {
+        return this.l(key);
     }
 }
 

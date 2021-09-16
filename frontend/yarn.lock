@@ -5987,10 +5987,10 @@
     "gauge" "~2.7.3"
     "set-blocking" "~2.0.0"
 
-"nswag@^13.4.2":
-  "integrity" "sha512-QKQlOm6098fqm1i2xBBq8AMKY2lbN6cFG14ZOLRNGFs23kV/QPwJdSmkT0IpweoPSTI2LH2ztFa5zTH3/l8Lgg=="
-  "resolved" "https://registry.npmjs.org/nswag/-/nswag-13.11.3.tgz"
-  "version" "13.11.3"
+"nswag@^13.13.2":
+  "integrity" "sha512-L3Jraa8Ml7KKSBAcjvdo+suDT2HxgpQ0S3uaK29P3b40n3GPY/c0VrfjsQqDPfb0zjKri0F4xby6/6meUNwPMw=="
+  "resolved" "https://registry.npmjs.org/nswag/-/nswag-13.13.2.tgz"
+  "version" "13.13.2"
 
 "nth-check@^2.0.0":
   "integrity" "sha512-i4sc/Kj8htBrAiH1viZ0TgU8Y5XqCaV/FziYK6TBczxmeKm3AEFWqqF3195yKudrarqy7Zu80Ra5dobFjn9X/Q=="
@@ -8572,7 +8572,7 @@
   "resolved" "https://registry.npmjs.org/tslib/-/tslib-2.2.0.tgz"
   "version" "2.2.0"
 
-"tslint@^5.0.0 || ^6.0.0", "tslint@^6.1.0", "tslint@~6.1.0":
+"tslint@^5.0.0 || ^6.0.0", "tslint@^6.1.0":
   "integrity" "sha512-IbR4nkT96EQOvKE2PW/djGz8iGNeJ4rF2mBfiYaR/nvUWYKJhLwimoJKgjIFEIDibBtOevj7BqCRL4oHeWWUCg=="
   "resolved" "https://registry.npmjs.org/tslint/-/tslint-6.1.3.tgz"
   "version" "6.1.3"
