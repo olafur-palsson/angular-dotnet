@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
 namespace backend.Infrastructure
@@ -15,5 +16,6 @@ namespace backend.Infrastructure
         public abstract TEntity CreateOne(TEntity entity);
         public abstract void DeleteOne(TEntity entityType);
         public abstract TEntity UpdateOne(TEntity entity);
+        public abstract List<TEntity> GetAll();
     }
 }

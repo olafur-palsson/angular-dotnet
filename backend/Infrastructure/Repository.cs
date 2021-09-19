@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace backend.Infrastructure
 {
     public interface IRepository<TEntityType, IdType> where TEntityType : class
@@ -6,5 +8,6 @@ namespace backend.Infrastructure
         TEntityType CreateOne(TEntityType entity);
         void DeleteOne(TEntityType entity);
         TEntityType UpdateOne(TEntityType entity);
+        List<TEntityType> GetAll();
     }
 }

@@ -8,10 +8,9 @@ namespace backend.App.Lols
     {
         private readonly LolRepository _db = new LolRepository();
 
-        public Lol CreateOne (Lol lol) {
-            var newLol = this._db.Lols.Add(lol);
-            this._db.SaveChanges();
-            return newLol.Entity;
+        public Lol CreateOne (Lol lol)
+        {
+            return this._db.CreateOne(lol);
         }
 
         public Lol RandomLol () {
