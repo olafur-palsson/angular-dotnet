@@ -1,17 +1,16 @@
-using System.Linq;
 using System.Collections.Generic;
-
+using System.Linq;
 using Lol = backend.Entities.Lol;
 
 namespace backend.App.Lols
 {
     public class Logic
     {
-        private Context db = new Context();
+        private readonly LolRepository _db = new LolRepository();
 
         public Lol CreateOne (Lol lol) {
-            var newLol = this.db.Lols.Add(lol);
-            this.db.SaveChanges();
+            var newLol = this._db.Lols.Add(lol);
+            this._db.SaveChanges();
             return newLol.Entity;
         }
 
@@ -26,7 +25,7 @@ namespace backend.App.Lols
 
         public List<Lol> GetAll () {
             var result =
-                from lol in this.db.Lols
+                from lol in this._db.Lols
                 select lol;
             return result.ToList();
         }

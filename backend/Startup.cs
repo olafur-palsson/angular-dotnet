@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
 
-namespace dotnet_api_backend_skeleton
+namespace backend
 {
     public class Startup
     {
