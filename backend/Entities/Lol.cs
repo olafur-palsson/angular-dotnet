@@ -14,14 +14,5 @@ namespace backend.Entities
               + $"Amount: {Amount}\n"
               + $"YoloId: {YoloId}";
         }
-
-        public static Lol CreateLol () {
-            return new Lol {
-                Name = "Name",
-                Text = "Some text bruh",
-                Amount = 69,
-                YoloId = null
-            };
-        }
     }
 }

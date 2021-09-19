@@ -1,19 +1,7 @@
-﻿using System.Security.AccessControl;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using backend;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
 
-
-
-namespace dotnet_api_backend_skeleton
+namespace backend
 {
     public class Program
     {
