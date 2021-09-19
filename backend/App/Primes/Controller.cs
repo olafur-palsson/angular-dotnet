@@ -1,11 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using Console = System.Console;
-
 using Microsoft.AspNetCore.Mvc;
-
-using Entities = backend.Entities;
-
 
 namespace backend.App.Primes
 {
@@ -17,6 +12,7 @@ namespace backend.App.Primes
         {
             return "tested";
         }
+        
         [HttpGet("getPrimes/{nPrimes}")]
         public List<int> GetPrimes(int nPrimes)
         {

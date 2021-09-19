@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-using LolController = backend.App.Lols.Controller;
+using LolController = backend.App.Lols.LolController;
 using PrimeController = backend.App.Primes.Controller;
 
 namespace backend.App

@@ -1,30 +1,28 @@
 using System.Collections.Generic;
-using Console = System.Console;
 using Microsoft.AspNetCore.Mvc;
-
 using Lol = backend.Entities.Lol;
 
 namespace backend.App.Lols
 {
     [Route("api/lols/")]
-    public class Controller
+    public class LolController : Controller
     {
-        private Context db = new Context();
+        private readonly Context _db = new Context();
 
         [HttpGet("getEntities/")]
-        public List<Lol> GetAll () {
-            return this.db.GetAll();
+        public List<Lol> GetAll (
+        ) {
+            return this._db.GetAll();
         }
 
-        [HttpGet("createOne/")]
-        public Lol CreateOne(int nPrimes)
+        public Lol CreateOne()
         {
             return this.Create(Lol.CreateLol());
         }
 
         private Lol Create (Lol lol) {
-            var newLol = this.db.Lols.Add(lol);
-            this.db.SaveChanges();
+            var newLol = this._db.Lols.Add(lol);
+            this._db.SaveChanges();
             return newLol.Entity;
         }
     }

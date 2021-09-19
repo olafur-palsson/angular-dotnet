@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using backend;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace dotnet_api_backend_skeleton
+[assembly: WebJobsStartup(typeof(Startup))]
+namespace backend
 {
-    public class Startup
+    public class Startup : IWebJobsStartup
     {
         public Startup(IConfiguration config)
         {
@@ -30,6 +34,11 @@ namespace dotnet_api_backend_skeleton
             }
 
             app.UseMvc();
+        }
+
+        public void Configure(IWebJobsBuilder builder)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
